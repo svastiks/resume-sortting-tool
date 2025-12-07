@@ -11,8 +11,10 @@ Makes applying easier by sorting resumes into structured folders.
 
 2. Run: `pip install -r requirements.txt`
 
-3. `python3 sort_resumes.py` will run the tool with watcher and sort resumes automatically in the background.
+3. (Optional) Create and edit `.env` to change the default Downloads folder paths if needed. Only needed if you want to scan from and store into different paths.
+
+4. `python3 sort_resumes.py` will run the tool with watcher and sort resumes automatically in the background.
 
 OR
 
-4. `python3 sort_resumes.py --batch` will process all existing resumes at once.
+5. `python3 sort_resumes.py --batch` will process all existing resumes at once.

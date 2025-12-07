@@ -6,6 +6,7 @@ from datetime import date, datetime
 from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from dotenv import load_dotenv
 
 def get_todays_date():
 
@@ -146,9 +147,13 @@ class ResumeHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     import sys
+
+    load_dotenv()
     
-    SOURCE_DIRECTORY = "/Users/svastik/Downloads"
-    BASE_DIRECTORY = "/Users/svastik/Downloads"
+    # Default to Downloads folder unless a unique paht is set in .env by the user
+    default_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
+    SOURCE_DIRECTORY = os.getenv('SOURCE_DIRECTORY', default_downloads)
+    BASE_DIRECTORY = os.getenv('BASE_DIRECTORY', default_downloads)
     
     # Run in watch mode (default) or batch mode (single use)
     if len(sys.argv) > 1 and sys.argv[1] == "--batch":
