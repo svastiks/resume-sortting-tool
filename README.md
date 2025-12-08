@@ -1,5 +1,5 @@
 # resume-sortting-tool
-Makes applying easier by sorting resumes into structured folders.
+Makes applying easier by sorting downloaded resumes into structured folders.
 
 # Example
 
