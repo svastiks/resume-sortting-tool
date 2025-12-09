@@ -1,4 +1,4 @@
-# resume-sortting-tool
+# resume-sorting-tool
 Makes applying easier by sorting downloaded resumes into structured folders.
 
 # Example
